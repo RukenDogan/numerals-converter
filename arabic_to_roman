@@ -1,0 +1,37 @@
+ ## Version encapsulée dans une fonction
+def conversion_arabe_romain():
+    # Dictionnaire de conversion :
+    conversion_nb = {
+        1: "I",
+        4: "IV",
+        5: "V",
+        9: "IX",
+        10: "X",
+        40: "XL",
+        50: "L",
+        90: "XC",
+        100: "C",
+        400: "CD",
+        500: "D",
+        900: "CM",
+        1000: "M"
+    }
+
+    # Saisie utilisateur :
+    nb=int(input("Entrez un nombre arabe entier superieur a 0 : "))
+
+    # Initialisation du résultat en chaîne vide :
+    resultat = ""
+
+    # Tri des clés du dictionnaire en ordre décroissant :
+    cles_triees = sorted(conversion_nb.keys(), reverse=True)
+
+    # Parcours des clés triées :
+    for key in cles_triees: # Pour chaque clé triée
+        while nb >= key: # Tant que le nombre est supérieur ou égal à la clé courante
+            resultat += conversion_nb[key] # Ajout de la valeur correspondante à la chaîne de caractères
+            nb -= key # Soustraction de la clé du nombre
+
+    print(resultat) # Affichage du résultat
+
+conversion_arabe_romain() # Appel de la fonction

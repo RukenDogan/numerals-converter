@@ -48,8 +48,11 @@ def conversion_romain_arabe(chiffre_romain):
 
     print(resultat) # Affichage du résultat
 
-chiffre_romain = input("Entrez un chiffre romain : ").upper() # Saisie utilisateur et conversion en majuscules
-if not is_roman_number(chiffre_romain):
-    print("Chiffre romain invalide")
-else:
-    conversion_romain_arabe(chiffre_romain)
+
+# A décommenter pour test indépendant :
+
+# chiffre_romain = input("Entrez un chiffre romain : ").upper() # Saisie utilisateur et conversion en majuscules
+# if not is_roman_number(chiffre_romain):
+#     print("Chiffre romain invalide")
+# else:
+#     conversion_romain_arabe(chiffre_romain) 

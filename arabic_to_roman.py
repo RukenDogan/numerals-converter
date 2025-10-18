@@ -1,5 +1,5 @@
  ## Version encapsulée dans une fonction
-def conversion_arabe_romain():
+def conversion_arabe_romain(nb):
     # Dictionnaire de conversion :
     conversion_nb = {
         1: "I",
@@ -18,7 +18,7 @@ def conversion_arabe_romain():
     }
 
     # Saisie utilisateur :
-    nb=int(input("Entrez un nombre arabe entier superieur a 0 : "))
+    # nb=int(input("Entrez un nombre arabe entier superieur a 0 : "))
 
     # Initialisation du résultat en chaîne vide :
     resultat = ""
@@ -32,6 +32,8 @@ def conversion_arabe_romain():
             resultat += conversion_nb[key] # Ajout de la valeur correspondante à la chaîne de caractères
             nb -= key # Soustraction de la clé du nombre
 
-    print(resultat) # Affichage du résultat
+    return resultat # Affichage du résultat
 
-conversion_arabe_romain() # Appel de la fonction
+    # print(resultat) # Affichage du résultat
+
+# conversion_arabe_romain() # Appel de la fonction (à décommenter pour test indépendant)
